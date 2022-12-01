@@ -28,14 +28,14 @@ let Counter = (props) => {
 
         <Card style={{ width: "18rem", backgroundColor: "orange" }}>
         <Card.Header style={{ backgroundColor: "#212529", color:"white" }} >Promoção BlackFriday 🔥</Card.Header>
-          <Card.Img style={{ background: "no-repeat center", backgroundSize: "cover", maxHeight: "300px" }} variant="top" src={props.src} />
+          <Card.Img style={{ background: "no-repeat center", backgroundSize: "cover", maxHeight: "300px" }} variant="top" src={props.foto} />
           <Card.Body>
-            <Card.Title>Card Title</Card.Title>
+            <Card.Title>{props.titulo}</Card.Title>
             <Card.Text>
-              
+              {props.texto}
             </Card.Text>
             <div style={{ display: "flex", justifyContent: "center" }}>
-              <p className="display-4">{count}</p>
+              <p className="display-3">{count}</p>
             </div>
 
             <div style={{ display: "flex", justifyContent: "center" }}>
