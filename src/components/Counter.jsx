@@ -5,7 +5,8 @@ import Card from "react-bootstrap/Card";
 import Badge from 'react-bootstrap/Badge';
 
 
-let Counter = (imgFileName) => {
+let Counter = (props) => {
+  console.log({props});
   let [count, setState] = useState(0);
 
   let incr = () => {
@@ -27,12 +28,11 @@ let Counter = (imgFileName) => {
 
         <Card style={{ width: "18rem", backgroundColor: "orange" }}>
         <Card.Header style={{ backgroundColor: "#212529", color:"white" }} >Promoção BlackFriday 🔥</Card.Header>
-          <Card.Img style={{ background: "no-repeat center", backgroundSize: "cover", maxHeight: "300px" }} variant="top" src="/revolucao-dos-bichos.jpg" />
+          <Card.Img style={{ background: "no-repeat center", backgroundSize: "cover", maxHeight: "300px" }} variant="top" src={props.src} />
           <Card.Body>
             <Card.Title>Card Title</Card.Title>
             <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              
             </Card.Text>
             <div style={{ display: "flex", justifyContent: "center" }}>
               <p className="display-4">{count}</p>

@@ -6,15 +6,15 @@ let Conteudo = () => {
   return (
     <Container className="mt-3">
       <Carousel variant="dark">
-        <Carousel.Item style={{marginBottom:"50px"}}>
-          <Counter className="d-block w-100" />
+        <Carousel.Item style={{marginBottom:"50px"}} >
+          <Counter className="d-block w-100"   src="/revolucao-dos-bichos.jpg" />
           <Carousel.Caption></Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item style={{marginBottom:"50px"}}>
-          <Counter className="d-block w-100" />
+          <Counter className="d-block w-100" src="/revolucao-dos-bichos.jpg" />
         </Carousel.Item>
         <Carousel.Item style={{marginBottom:"50px"}}>
-          <Counter className="d-block w-100" />
+          <Counter className="d-block w-100" src="/revolucao-dos-bichos.jpg"/>
 
           <Carousel.Caption></Carousel.Caption>
         </Carousel.Item>
