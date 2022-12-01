@@ -12,7 +12,7 @@ let Rodape = () => {
           textAlign: "center"
         }}
       >
-        Desenvolvido por: Gustavo Naves && Éber Leocádio
+        Desenvolvido por: Gustavo Naves && Eber Leocádio
       </span>
       <Image src="/footer-wave.svg" responsive />
     </div>

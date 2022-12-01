@@ -20,23 +20,23 @@ let Conteudo = () => {
       texto: " Este volume se compõe de transcrições das conferências de Ludwig von Mises na Biblioteca Pública de São Francisco, em meados de 1952.",
       foto: "/marxismo.jpg"
     }
-  ]
+  ];
+  
+  let livraria = [];
+
+  for(let livro of livros){
+    livraria.push(
+      <Carousel.Item style={{marginBottom:"50px"}} >
+        <Counter className="d-block w-100"   foto={livro.foto}  titulo={livro.titulo} texto={livro.texto}/>
+        <Carousel.Caption></Carousel.Caption>
+      </Carousel.Item>
+    )
+  }
 
   return (
     <Container className="mt-3">
       <Carousel variant="dark">
-        <Carousel.Item style={{marginBottom:"50px"}} >
-          <Counter className="d-block w-100"   foto={livros[0].foto}  titulo={livros[0].titulo} texto={livros[0].texto}/>
-          <Carousel.Caption></Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item style={{marginBottom:"50px"}}>
-          <Counter className="d-block w-100" foto={livros[1].foto}  titulo={livros[1].titulo} texto={livros[1].texto}/>
-        </Carousel.Item>
-        <Carousel.Item style={{marginBottom:"50px"}}>
-          <Counter className="d-block w-100" foto={livros[2].foto}  titulo={livros[2].titulo} texto={livros[2].texto}/>
-
-          <Carousel.Caption></Carousel.Caption>
-        </Carousel.Item>
+          {livraria}       
       </Carousel>
     </Container>
   );
