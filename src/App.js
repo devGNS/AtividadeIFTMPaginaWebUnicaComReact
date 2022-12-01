@@ -1,10 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+// import React from 'react'
 
-function App() {
+import "./App.css";
+import { Container } from "react-bootstrap";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
+import Counter from "./components/Counter";
+
+let App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
+    <>
+      {/* <NavBar bg="dark" expand="lg" variant="dark">
+        <Container>
+          <NavBar.Brand href="/">+Livros</NavBar.Brand>
+        </Container>
+      </NavBar> */}
+
+      <Navbar bg="dark" expand="lg" variant="dark">
+        <Container>
+          <Navbar.Brand href="/">+Livros</Navbar.Brand>
+        </Container>
+      </Navbar>
+
+      <Counter/>
+    </>
+  );
+};
+
+export default App;
+
+{
+  /* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -17,9 +43,5 @@ function App() {
         >
           Learn React
         </a>
-      </header>
-    </div>
-  );
+      </header> */
 }
-
-export default App;
