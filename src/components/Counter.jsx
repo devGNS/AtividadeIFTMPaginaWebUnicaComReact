@@ -1,43 +1,60 @@
-import React, {useState} from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import React, { useState } from "react";
+import { Container } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
+import Badge from 'react-bootstrap/Badge';
 
-let Counter = () => {
 
-    let [count , setState] = useState(0);
+let Counter = (imgFileName) => {
+  let [count, setState] = useState(0);
 
-    let incr = () => {
-        setState(count+1);
+  let incr = () => {
+    setState(count + 1);
+  };
+
+  let decr = () => {
+    if (count > 0) {
+      setState(count - 1);
     }
-
-    let decr = () => {
-        if(count>0){
-            setState(count -1);
-        }
-    }
+  };
 
   return (
     <>
-      <Container className="mt-3">
-        <Row>
-          <Col xs={4}>
-            <Card style={{ width: "18rem", backgroundColor: "orange" }}>
-              <Card.Img variant="top" src="holder.js/100px180" />
-              <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </Card.Text>
-                <p className="display-4">{count}</p>
-                <Button onClick={decr} variant="danger" className="m-1">-</Button>
-                <Button onClick={incr} variant="success" className="m-1">+</Button>
-                <Button variant="primary">Adicionar ao carrinho</Button>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
+      <Container
+        className="mt-3"
+        style={{ width: "100%", display: "flex", justifyContent: "center" }}
+      >
+
+        <Card style={{ width: "18rem", backgroundColor: "orange" }}>
+        <Card.Header style={{ backgroundColor: "#212529", color:"white" }} >Promoção BlackFriday 🔥</Card.Header>
+          <Card.Img style={{ background: "no-repeat center", backgroundSize: "cover", maxHeight: "300px" }} variant="top" src="/revolucao-dos-bichos.jpg" />
+          <Card.Body>
+            <Card.Title>Card Title</Card.Title>
+            <Card.Text>
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </Card.Text>
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <p className="display-4">{count}</p>
+            </div>
+
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <Button onClick={decr} variant="danger" className="m-1">
+                -
+              </Button>
+              <Button onClick={incr} variant="success" className="m-1">
+                +
+              </Button>
+            </div>
+
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <Button variant="dark" className="m-1">
+                Adicionar ao carrinho
+              </Button>
+            </div>
+          </Card.Body>
+        </Card>
+ 
       </Container>
     </>
   );
